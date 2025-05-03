@@ -10,8 +10,22 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+int main(){
+    
+    int i,num;
+    for(i=0;i<60;i++){
+        num=i;
+    }
+    printf("After Right Shift Operation value of a is:%d",num>>3);
+    return 0;
+}
+```
 
 ## OUTPUT
+![438647562-c7f129f2-c0b3-422b-8d40-dbab0799b361](https://github.com/user-attachments/assets/0ba0d3a4-949f-49d6-b5a2-d54f20600f87)
+
 
 
 
@@ -47,9 +61,26 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
-
+```
+#include <stdio.h>
+int main(){
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a<b && a<c){
+        printf("%d is the smallest number.",a);
+    }
+    else if(b<a && b<c){
+           printf("%d is the smallest number.",b);
+    }
+    else{
+           printf("%d is the smallest number.",c);
+    }
+}
+```
 
 ## OUTPUT
+![438649099-f058e602-ca29-4895-b80a-46fd042a8e62](https://github.com/user-attachments/assets/078e38c7-9f50-474b-b571-d09f0d6a7cd7)
+
            
 ## RESULT
 
@@ -70,8 +101,26 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    scanf("%s", str);
+    for (int i = 0; str[i]; i++) {
+        str[i] = tolower(str[i]);
+    }
+    printf("Lower case String is:%s\n", str);
+
+    return 0;
+}
+```
 
 ## OUTPUT
+![438650090-7e02c218-2635-443a-ac8c-dfb22851be64](https://github.com/user-attachments/assets/bb74a8ef-c6fc-4434-a25b-9fe78b20b8fa)
+
 
 
 
@@ -95,8 +144,33 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <string.h>
+int main(){
+   char str1[100],str2[100],merged[200];
+   int i=0,j=0,count=0;
+   scanf("%s %s",str1,str2);
+   do
+   {
+       merged[i]=str1[i];
+   }while(str1[i++] != '\0');
+   i--;
+   do{
+      merged[i++] = str2[j];
+   }while(str2[j++] != '\0');
+   i=0;
+   do{
+       if (merged[i] != '\0')
+       count++;
+   }while(merged[i++] !='\0');
+   printf("%s\n%d",merged,count);
+   return 0;
+}
+```
 
 ## OUTPUT
+![438652156-42d0a93e-71c7-4751-950d-75bf128b87f3](https://github.com/user-attachments/assets/4ab2b36b-b92e-402b-866a-d30b1e67234e)
 
 
 
@@ -129,9 +203,36 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str1[100],str2[100];
+    int i=0,count=0;
+    fgets(str1,sizeof(str1),stdin);
+     fgets(str2,sizeof(str2),stdin);
+     
+    while(str1[i] != '\0' || str2[i] != '\0'){
+        if(str1[i]  != str2[i]){
+            count =1;
+            break;
+        }
+        i++;
+        
+    }
+    if(count ==0){
+        printf("strings are same");
+    }
+    else{
+        printf("strings are not same");
+    }
+}
+```
 
 
 ## OUTPUT
+![438652939-cd7c65a7-1b30-48eb-85c8-8c88dc1a586b](https://github.com/user-attachments/assets/08b2174c-4f4d-4082-bd93-5a461473da3e)
+
  
 
 ## RESULT
